@@ -1,0 +1,128 @@
+/*
+---- RESET CSS -----
+*/
+* {
+    margin: 0;
+    padding: 0;
+    border:none;
+    outline: none;
+    background-image:none;
+    box-sizing: border-box;
+    background-color:transparent;
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    text-decoration: none;
+    font-family: Helvetica, sans-serif;
+}
+
+/* 
+:root {
+
+} */
+
+/*
+--- HEADER ---
+*/
+
+.container {
+    width: 85%;
+}
+
+.header {
+    height: 200px;
+    background: rgb(73, 73, 201) url('../img/globe2.png') no-repeat center;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: column;
+}
+
+.header .logo {
+    font-size: 55px;
+    transform: translateY(-55px);
+}
+
+.header .logo strong {
+    color: rgba(255, 255, 255, 0.8);
+    padding: 55px 5px;
+    margin-right: -5.5px;
+    background: linear-gradient(
+        to right,
+        rgba(206, 27, 0, 0.8),
+        rgba(206, 27, 0, 0.5),
+        rgba(206, 27, 0, 0.3),
+        rgba(206, 27, 0, 0.2),
+        rgba(206, 27, 0, 0.0)
+    ) ;
+}
+
+.header .logo em {
+    padding-left: 10px;
+    color: #101077;
+    text-shadow: 1px 1px 15px #fff;
+}
+
+.header .logo span {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.header .bg-container {
+    background-color: rgba(255, 255, 255, 0.5);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.header .container,
+.header .nav-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header .nav-bar a{
+    padding: 10px;
+    color: #101077;
+    font-weight: 600;
+    font-size: 14px;
+}
+    
+.header .nav-bar a {
+    border-left: 1px solid rgba(0, 0, 0, 0.2);
+    text-transform: uppercase;
+}
+
+.header .nav-bar a:last-child {
+    border-right: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.header .nav-bar a:hover,
+.header .search-bar {
+    background-color:rgba(16, 16, 119, 0.3);
+}
+
+.header .search-bar {
+    border: 1px solid #fff;
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header .search-bar input {
+    width: 250px;
+    padding-left: 5px;
+    color: #fff;
+}
+
+.header .search-bar input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.header .search-bar i {
+    font-size: 16px;
+    padding: 3px;
+    cursor: pointer;
+    color: #fff;
+}
