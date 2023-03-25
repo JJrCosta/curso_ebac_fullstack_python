@@ -134,7 +134,7 @@
     color: #212121;
 }
 /*
---- COVER CONTENT ---
+--- COVER CONTAINER ---
 */
 .content .container {
     width: 95%;
@@ -145,7 +145,9 @@
     justify-content: space-between;
     flex-wrap: wrap;
 }
-
+/*
+--- HEADLINE CONTAINER  ---
+*/
 .cover .headline {
     background: url('../img/yoga.jpg') no-repeat center center;
     background-size: cover;
@@ -172,18 +174,21 @@
     color: #efefef;
 }
 
-.headline a:hover {
-    text-decoration: underline;
+.headline a {
+    font-size: 14px;
+    color: #8ae1fc;
 }
 
-.content-headline a {
-    font-size: 14px;
+.headline a:hover {
+    text-decoration: underline;
 }
 
 .headline h3 {
     font-size: 30px;
 }
-
+/*
+---  SIDEBAR CONTAINER ---
+*/
 .cover .side-bar {
     background-color: #212121;
     height: 600px;
@@ -193,8 +198,23 @@
 .cover .side-bar .aside-menu {
     border-bottom: 1px solid #efefef;
     height: 25%;
+    padding: 10px;
 }
 
-.side-bar h3 {
-    font-size: 15px;
+.cover .side-bar .aside-menu h3,
+.cover .side-bar .aside-menu p {
+    padding-bottom: 5px;
+    color: #efefef;
+}
+
+.cover .side-bar .aside-menu:hover {
+    background-color: rgba(239, 239, 239, 0.2);
+}
+
+.cover .side-bar .aside-menu h3 {
+    font-size: 20px;
+}
+
+.cover .side-bar .aside-menu p {
+    font-size: 14px;
 }
