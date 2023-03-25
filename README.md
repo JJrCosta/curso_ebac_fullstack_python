@@ -14,7 +14,7 @@ Description: A sign in and sign up page of a company dedicated to the research a
 Tools: HTML-CSS-JS
 
 Module 04 - CSS - branch/exercicio.css
-Project name: Oxygen
+Project name: DAT News
 Description: A news page that has 3 sections of informative content: - Latest News; - Economy; - Sports.
 Tools: HTML-CSS
 
