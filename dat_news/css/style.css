@@ -198,7 +198,20 @@
 .cover .side-bar .aside-menu {
     border-bottom: 1px solid #efefef;
     height: 25%;
-    padding: 10px;
+    padding: 5px 20px 5px 15px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.cover .side-bar .aside-menu:last-child {
+    border: none;
+}
+
+.cover .side-bar .aside-menu img {
+    width: 140px;
+    height: 120px;
+    padding-right: 10px;
 }
 
 .cover .side-bar .aside-menu h3,
