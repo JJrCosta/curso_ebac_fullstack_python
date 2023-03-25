@@ -118,7 +118,7 @@
 }
 
 .header .search-bar input {
-    width: 200px;
+    width: 250px;
     padding-left: 10px;
     color: #212121;
 }
@@ -133,10 +133,15 @@
     cursor: pointer;
     color: #212121;
 }
+
+.header .social-icons i {
+    font-size: 28px;
+    padding: 2px;
+    color: #efefef;
+}
 /*
 --- COVER CONTAINER ---
 */
-
 .content {
     margin-top: 40px;
 }
@@ -206,6 +211,7 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
+    cursor: pointer;
 }
 
 .cover .side-bar .aside-menu:last-child {
@@ -312,7 +318,7 @@
     padding-right: 20px;
 }
 /*
---- SECTION SPORTS CONTAINER  ---
+--- SECTION SPORTS MOSAIC  ---
 */
 .sports .mosaic {
     display: flex;
@@ -373,4 +379,14 @@
 .mosaic .bg-mosaic.bg-06 {
     background: url('../img/basketball.jpg') no-repeat center center;
     background-size: cover;
+}
+
+footer {
+    background-color: #212121;
+    height: 80px;
+    margin-top: 50px;
+    color: #efefef;
+    text-align: center;
+    padding: 20px;
+
 }
