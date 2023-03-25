@@ -13,7 +13,7 @@
     -moz-box-shadow: none;
     -webkit-box-shadow: none;
     text-decoration: none;
-    font-family: Helvetica, sans-serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 /* 
@@ -24,105 +24,177 @@
 /*
 --- HEADER ---
 */
-
-.container {
-    width: 85%;
-}
-
 .header {
-    height: 200px;
-    background: rgb(73, 73, 201) url('../img/globe2.png') no-repeat center;
+    height: 100px;
     display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    background: linear-gradient(
+        to right,
+        rgba(0, 27, 206, 0.8),
+        rgba(0, 27, 206, 0.5),
+        rgba(0, 27, 206, 0.3),
+        rgba(0, 27, 206, 0.2),
+        rgba(0, 27, 206, 0.0)
+        );
 }
 
-.header .logo {
-    font-size: 55px;
-    transform: translateY(-55px);
+.header .container {
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+}
+
+    .header .logo {
+    color: #991717;
+    font-size: 60px;
+    width: 90%;
+    background: url('../img/globe2.png') no-repeat center;
 }
 
 .header .logo strong {
-    color: rgba(255, 255, 255, 0.8);
-    padding: 55px 5px;
-    margin-right: -5.5px;
-    background: linear-gradient(
-        to right,
-        rgba(206, 27, 0, 0.8),
-        rgba(206, 27, 0, 0.5),
-        rgba(206, 27, 0, 0.3),
-        rgba(206, 27, 0, 0.2),
-        rgba(206, 27, 0, 0.0)
-    ) ;
-}
-
-.header .logo em {
-    padding-left: 10px;
-    color: #101077;
-    text-shadow: 1px 1px 15px #fff;
+    letter-spacing: -9px;
 }
 
 .header .logo span {
-    color: rgba(255, 255, 255, 0.6);
+    color: #efefef;
+}
+
+.header .logo em {
+    font-size: 30px;
+    margin-left: -25PX;
+    padding-left: 10px;
+    color: #101077;
+    text-shadow: 1px 1px 1px rgba(255, 27, 0, 0.8);
 }
 
 .header .bg-container {
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: #212121;
     width: 100%;
     display: flex;
     justify-content: center;
 }
-
-.header .container,
+/*
+--- TOP NAVIGATION BAR ---
+*/
 .header .nav-bar {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 .header .nav-bar a{
     padding: 10px;
-    color: #101077;
+    color: #efefef;
     font-weight: 600;
     font-size: 14px;
 }
     
 .header .nav-bar a {
-    border-left: 1px solid rgba(0, 0, 0, 0.2);
+    border-left: 1px solid rgba(222, 222, 222, 0.2);
     text-transform: uppercase;
 }
 
 .header .nav-bar a:last-child {
-    border-right: 1px solid rgba(0, 0, 0, 0.2);
+    border-right: 1px solid rgba(222, 222, 222, 0.2);
 }
 
 .header .nav-bar a:hover,
 .header .search-bar {
-    background-color:rgba(16, 16, 119, 0.3);
+    background-color:rgba(222, 222, 222, 0.8);
+    color: #212121;
+    transition: 300ms;
 }
-
+/*
+--- TOP SEARCH BAR ---
+*/
 .header .search-bar {
-    border: 1px solid #fff;
-    border-radius: 2px;
+    border-radius: 25px;
+    margin: 8px;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
 .header .search-bar input {
-    width: 250px;
-    padding-left: 5px;
-    color: #fff;
+    width: 200px;
+    padding-left: 10px;
+    color: #212121;
 }
 
 .header .search-bar input::placeholder {
-    color: rgba(255, 255, 255, 0.6);
+    color: #212121;
 }
 
 .header .search-bar i {
     font-size: 16px;
     padding: 3px;
     cursor: pointer;
-    color: #fff;
+    color: #212121;
+}
+/*
+--- COVER CONTENT ---
+*/
+.content .container {
+    width: 95%;
+    margin: 15px auto;
+}
+.content .cover {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.cover .headline {
+    background: url('../img/yoga.jpg') no-repeat center center;
+    background-size: cover;
+    width: 65%;
+    border: 1px solid #efefef;
+}
+
+.headline .bg-headline {
+    background-color: rgba(0, 0, 0, 0.3);
+    height: 600px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.headline .bg-headline {
+    padding: 30px;
+}
+
+.headline h3,
+.headline a,
+.headline p {
+    padding-bottom: 5px;
+    color: #efefef;
+}
+
+.headline a:hover {
+    text-decoration: underline;
+}
+
+.content-headline a {
+    font-size: 14px;
+}
+
+.headline h3 {
+    font-size: 30px;
+}
+
+.cover .side-bar {
+    background-color: #212121;
+    height: 600px;
+    width: 35%;
+}
+
+.cover .side-bar .aside-menu {
+    border-bottom: 1px solid #efefef;
+    height: 25%;
+}
+
+.side-bar h3 {
+    font-size: 15px;
 }
