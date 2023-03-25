@@ -149,10 +149,9 @@
 --- HEADLINE CONTAINER  ---
 */
 .cover .headline {
-    background: url('../img/yoga.jpg') no-repeat center center;
+    background: url('../img/taxi.jpg') no-repeat center center;
     background-size: cover;
     width: 65%;
-    border: 1px solid #efefef;
 }
 
 .headline .bg-headline {
@@ -196,7 +195,7 @@
 }
 
 .cover .side-bar .aside-menu {
-    border-bottom: 1px solid #efefef;
+    border-bottom: 2px solid rgba(239, 239, 239, 0.3);
     height: 25%;
     padding: 5px 20px 5px 15px;
     display: flex;
