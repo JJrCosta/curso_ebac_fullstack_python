@@ -1,4 +1,4 @@
-﻿# Exercises and projects EBAC Fullstack Python
+# Exercises and projects EBAC Fullstack Python
 List of modules and exercise files or project name:
 
 Module 01 - START - ---
@@ -17,5 +17,3 @@ Module 04 - CSS - branch/exercicio.css
 Project name: DAT News
 Description: A news page that has 3 sections of informative content: - Latest News; - Economy; - Sports.
 Tools: HTML-CSS
-
-Module 05 - Project 1
