@@ -1,0 +1,43 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+body {
+    background: #121212 url('../img/numbers-bg.jpg') no-repeat center center;
+    background-size: cover;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.form {
+    width: 70%;
+    min-width: 300px;
+    max-width: 500px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 15px;
+    
+    color: #efefef;
+}
+.form input,
+.form button {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 15px;
+    font-size: 16px;
+    color: #414141;
+    border: none;
+}
+.form button {
+    padding: 10px;
+    text-transform: uppercase;
+    color: #efefef;
+    background-color: tomato;
+}
