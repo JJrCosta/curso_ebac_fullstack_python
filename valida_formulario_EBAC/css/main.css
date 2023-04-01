@@ -10,11 +10,34 @@ body {
 }
 
 .container {
-    margin: 80px auto;
+    position: relative;
+    margin: 0 auto;
     max-width: 640px;
+}
+
+.msg {
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    margin-top: -50px;
+    line-height: 50px;
+    font-size: 18px;
+    text-align: center;
+    color: #fff;
+}
+
+.msg.error {
+    background-color: #c96868;
+}
+
+.msg.success {
+    background-color: #6bca73;
+}
+
+.bg-form {
+    margin: 80px 0;
     width: 100%;
     background-color: rgba(255, 255, 255, 0.2);
-    border: 1px solid #fff;
     border-radius: 3px;
     margin-top: 150px;
 }
@@ -23,6 +46,7 @@ form {
     padding: 20px 10px;
     backdrop-filter: blur(3px);
     border-radius: 3px;
+    border: 1px solid #fff;
 }
 
 input, h1, button {
@@ -36,6 +60,11 @@ input, h1, button {
 input, button {
     border: 1px solid #bebebe;
     border-radius: 2px;
+}
+
+input.error {
+    border: 2px solid #b95454;
+    offset: red;
 }
 
 button {
