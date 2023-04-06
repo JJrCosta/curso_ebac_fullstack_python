@@ -13,8 +13,8 @@ function newLine() {
     if (taskList.includes(newTask.val())) {
         $('p').css("display","block" );
     } else {
-        $('p').css("display","none" );
         $(newLine).appendTo('ul');
+        $(newLine).fadeIn(1000);
         taskList.push(newTask.val());
     }
     
@@ -26,12 +26,9 @@ $('ul').on('click', 'li', function() {
     
     if (verifyCheck) {
         $(this).find('span').removeClass('check');
-        verifyCheck = false;
+        verifyCheck = false
     } else {
         $(this).find('span').addClass('check');
-        verifyCheck = true;
+        verifyCheck = true
     }
 });
-
-
-
