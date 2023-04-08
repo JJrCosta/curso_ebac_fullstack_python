@@ -5,24 +5,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulário de Cadastro</title>
+    <!-- CUSTOM MAIN CSS -->
+    <link rel="stylesheet" href="./css/main.css">
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
         <div class="container">
-            <h1>Formulário de Cadastro</h1>
+            <h1>Cadastro</h1>
         </div>
     </header>
     <form>
-        <div class="container">
+        <div class="container container-flex">
             <fieldset id="dados-login">
                 <legend>Dados de login</legend>
-                <label for="">E-mail:</label>
+                <label for="">E-mail</label>
                 <input type="email">
-                <label for="">Confirme o e-mail:</label>
+                <label for="">Confirme o e-mail</label>
                 <input type="email">
-                <label for="">Senha:</label>
+                <label for="">Senha</label>
                 <input type="password">
-                <label for="">Confirme a senha:</label>
+                <label for="">Confirme a senha</label>
                 <input type="password">
             </fieldset>
 
@@ -33,37 +39,35 @@
                 <label for="cpf">CPF</label>
                 <input type="text">
                 <label for="tel">Telefone</label>
-                <select name="typePhone" id="type-phone">
-                    <option value="cel">Celular</option>
-                    <option value="resid">Residencial</option>
-                </select>
                 <input type="text">
                 <label for="dt-nascimento">Data de nascimento</label>
                 <input type="date">
             </fieldset>
 
-            <fieldset id="dados-entrega">
+            <fieldset class="container-flex" id="dados-entrega">
                 <legend>Endereço de entrega</legend>
-                <label for="cep">CEP</label>
-                <input type="text">
-                <label for="">Logradouro</label>
-                <input type="text">
-                <label for="">Número</label>
-                <input type="text">
-                <label for=""><input type="radio"> Sem número</label>
-                <label for="">Complemento</label>
-                <input type="text">
-                <label for="">Bairro</label>
-                <input type="text">
-                <label for="">Cidade</label>
-                <input type="text">
-                <label for="">Estado</label>
-                <input type="text">
-                <label for="">Ponto de referência</label>
-                <textarea name="" id="" placeholder="Opcional"></textarea>
+                <div class="container-flex box-entrega">
+                    <label for="cep">CEP</label>
+                    <input type="text">
+                    <label for="">Logradouro</label>
+                    <input type="text">
+                    <label for="">Número</label>
+                    <input type="text" id="numero">
+                    <label for="">Complemento</label>
+                    <input type="text">
+                </div>
+                <div class="container-flex box-entrega">
+                    <label for="">Bairro</label>
+                    <input type="text">
+                    <label for="">Cidade</label>
+                    <input type="text">
+                    <label for="">Estado</label>
+                    <input type="text">
+                </div>
+                <textarea name="" id="" placeholder="Referência (Opcional)"></textarea>
+                <button type="submit">Enviar</button>
             </fieldset>
 
-            <button type="submit">Enviar</button>
         </div>
     </form>
 </body>
