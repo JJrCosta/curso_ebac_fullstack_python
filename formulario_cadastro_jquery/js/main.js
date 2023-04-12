@@ -8,7 +8,7 @@ $(document).ready(function() {
         placeholder: '000.000.000-00'
     });
 
-    $('#postal-code').mask('00.000-000', {
+    $('#cep').mask('00.000-000', {
         placeholder: '00.000-000'
     });
 
