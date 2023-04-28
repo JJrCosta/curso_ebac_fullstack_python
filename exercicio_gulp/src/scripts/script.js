@@ -1,3 +1,12 @@
-document.querySelector('.mobile-btn').addEventListener('click', function() {
-    document.querySelector('.navbar').classList.add('active');
-});
+function menuExpand() {
+    let navMenu = document.querySelector('.navbar');
+    if (navMenu.style.display === "none") {
+        navMenu.style.display = "block";
+    } else {
+        navMenu.style.display = "none";
+    }
+    
+}
+
+
+
