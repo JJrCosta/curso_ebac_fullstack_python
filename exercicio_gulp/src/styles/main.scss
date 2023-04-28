@@ -1,0 +1,238 @@
+@use 'variaveis';
+@use 'reset';
+
+body {
+    background-color: variaveis.$corPrincipal;
+}
+
+.container {
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+.bg-header {
+    background-color: variaveis.$corSecundaria;
+    position: sticky;
+    top: 0;
+    z-index: 9;
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.5em 0;
+    }
+
+    .logo {
+        font-size: 2em;
+        margin-left: 0.2em;
+        color: variaveis.$corTexto;
+    }
+
+    .mobile-btn {
+        background: url('../images/img_toggle.png') no-repeat center;
+        background-size: cover;
+        width: 50px;
+        height: 50px;
+        margin-right: 0.2em;
+        display: none;
+        cursor: pointer;
+    }
+
+    .navbar {
+    
+        &.active {
+            display: block;
+        }
+    
+        .nav-item {
+            display: inline-block;
+            margin-left: 0.6em;
+            padding: 0.6em 1em;
+            border-radius: 0.2em;
+    
+            &:hover {
+                background-color: variaveis.$corHoverSecundaria;
+                transition: 500ms;
+            }
+    
+            .nav-link {
+                color: variaveis.$corPreto;
+            }
+        }
+    }
+    
+}
+
+// SECTION Sobre o projeto
+.cover {
+    background: url('../images/cover_img.jpg') no-repeat center fixed;
+    background-size: cover;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .bg-conteudo {
+        background-color: rgba(255, 255, 255, 0.7);
+        
+    }
+
+    .conteudo {
+        padding: 4em;
+
+        .titulo-secao {
+            font-size: 2.5em;
+            text-align: center;
+        }
+
+        .texto-secao {
+            font-size: 1.2em;
+            margin-top: 1.5em;
+
+            p {
+                margin-bottom: 0.5em;
+                text-align: justify;
+            }
+        }
+    }
+}
+
+// SECTION Quem somos
+.quem-somos {
+    .conteudo {
+        .titulo-secao {
+            font-size: 2.5em;
+            text-align: center;
+            margin: 1.5em 0;
+        }
+    }
+
+    .cards {
+        width: 100%;
+
+        .card {
+            width: 340px;
+            max-width: 33%;
+            display: inline-block;
+            background-color: variaveis.$corSecundaria;
+            text-align: center;
+            padding: 0.2em;
+            margin-top: 0.2em;
+
+            .card-img {
+                display: block;
+                width: 100%;
+            }
+
+            .card-body{
+                background-color: variaveis.$corTexto;
+                padding: 0.5em;
+            }
+
+            .card-footer {
+                margin: 1.5em;
+            }
+
+            .btn-link {
+                background-color: variaveis.$corBtn;
+                color: variaveis.$corTexto;
+                padding: 0.5em 2em;
+                border-radius: 3em;
+
+                &:hover {
+                    background-color: variaveis.$corHoverSecundaria;
+                    transition: 500ms;
+                }
+            }
+        }
+    }
+}
+
+// SECTION Contato
+.contato {
+    margin-bottom: 3em;
+
+    .titulo-secao {
+        font-size: 2.5em;
+        text-align: center;
+        margin: 1.5em 0;
+    }
+
+    .formulario-contato {
+        background-color: variaveis.$corTexto;
+        padding: 2em;
+
+        input,
+        textarea,
+        label {
+            width: 100%;
+            height: 100%;
+            background-color: transparent;
+            color: variaveis.$corHoverSecundaria;
+            cursor: pointer;
+            padding: 0.5em;
+        }
+
+        .input-box {
+            width: 100%;
+            border-bottom: 2px solid variaveis.$corHoverSecundaria;
+            margin: 30px 0;
+            
+            textarea {
+                margin-top: 0.5em;
+                background-color: variaveis.$corTexto;
+            }
+        }
+
+        .btn-box {
+            text-align: right;
+
+            .btn-submit {
+                background-color: variaveis.$corBtn;
+                color: variaveis.$corTexto;
+                padding: 0.5em 5em;
+                border-radius: 0.5em;
+                font-size: 1.2em;
+                cursor: pointer;
+    
+                &:hover {
+                    background-color: variaveis.$corHoverSecundaria;
+                    transition: 500ms;
+                }
+            }
+        }
+    }
+}
+
+// Rodapé
+.rodape {
+    text-align: center;
+    background-color: variaveis.$corSecundaria;
+
+    .texto-rodape {
+        color: variaveis.$corTexto;
+        line-height: 3em;
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 870px) {
+    .quem-somos .cards .card {
+        min-width: 49.5%;
+    }
+}
+
+@media (max-width: 767px) {
+    .bg-header {
+        .container {
+            flex-direction: column;
+        }
+    }
+    .quem-somos .cards .card {
+        min-width: 99%;
+    }
+    .cover .conteudo {
+        padding: 0.2em;
+    }
+}
