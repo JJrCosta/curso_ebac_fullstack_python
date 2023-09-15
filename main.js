@@ -1,37 +1,25 @@
-// Classe abstrata Livro
-function Livro(titulo, autor, anoPublicacao, preco) {
-    this.titulo = titulo;
-    this.autor = autor;
-    this.anoPublicacao = anoPublicacao;
-    this.preco = preco;
-}
+class Aluno {
+    constructor(nome, nota) {
+        this.nome = nome;
+        this.nota = nota;
+    }
 
-// Classe derivada LivroFisico
-function LivroFisico(titulo, autor, anoPublicacao, preco, taxaEnvio) {
-    Livro.call(this, titulo, autor, anoPublicacao, preco);
-    this.taxaEnvio = taxaEnvio;
-
-    this.calcularPrecoFinal = function() {
-        return this.preco + this.taxaEnvio;
+    estaAprovado() {
+        return this.nota >= 6;
     }
 }
 
-// Classe derivada LivroDigital
-function LivroDigital(titulo, autor, anoPublicacao, preco, formato) {
-    Livro.call(this, titulo, autor, anoPublicacao, preco);
-    this.formato = formato;
-    
-    this.calcularPrecoFinal = function() {
-        return this.preco;
-    }
-}
+const alunos = [
+    new Aluno("João", 7),
+    new Aluno("Maria", 5),
+    new Aluno("Pedro", 8),
+    new Aluno("Ana", 6),
+    new Aluno("Carlos", 4),
+];
 
-// Criando instâncias de objetos
-const livro1 = new LivroFisico("Aventuras de Sherlock Holmes", "Sir Arthur Conan Doyle", 1892, 35.99, 5.0);
-const livro2 = new LivroDigital("JavaScript: The Good Parts", "Douglas Crockford", 2008, 19.99, "PDF");
-const livro3 = new LivroFisico("O Senhor dos Anéis", "J.R.R. Tolkien", 1954, 45.99, 6.0);
+const alunosAprovados = alunos.filter((aluno) => aluno.estaAprovado());
+const nomesAlunosAprovados = alunosAprovados.map(({ nome }) => nome);
 
-// Usando os métodos das classes
-console.log("Livro 1 - Preço Final (com envio): $" + livro1.calcularPrecoFinal());
-console.log("Livro 2 - Preço Final: $" + livro2.calcularPrecoFinal());
-console.log("Livro 3 - Preço Final (com envio): $" + livro3.calcularPrecoFinal());
+console.log("Alunos Aprovados: ");
+console.log(alunosAprovados);
+console.log(`Parabéns aos alunos: ${nomesAlunosAprovados}`);
